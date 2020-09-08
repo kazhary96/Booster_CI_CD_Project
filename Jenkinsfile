@@ -2,12 +2,6 @@ pipeline {
     agent {label 'slave'}
     stages {
 
-        stage('preparation') {
-            steps {
-                git 'https://github.com/kazhary96/Booster_CI_CD_Project'
-            }
-        }
-
         stage('build') {
             steps {
               sh 'docker build -t kazhary96/CICD:v1.0 .'
